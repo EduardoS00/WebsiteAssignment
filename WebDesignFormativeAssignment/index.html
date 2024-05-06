@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design Assignment</title>
+    <link rel="stylesheet" href="pageStyle.css">
+</head>
+<body>
+    <div class="mainBody">
+        <div class="sideBox"></div>
+        <div class="centerBox"></div>
+        <div class="sideBox"></div>
+    </div>
+
+    <div class="welcomeText">
+        <h1>Hello!</h1>
+        <p>I'm going to show you...<p>
+        <h3>
+            <span style="font-size: 30px; color: red;">2</span>
+            reasons to visit my country of origin!
+        </h3>
+    </div>
+
+    <div class="buttonsSect">
+        <a href="gastronomyPage.html"><button>Gastronomy to taste</button></a>
+        <a href="placestovisitPage.html"><button>Places to visit</button></a>
+    </div>
+
+    <div class="contact_and_creds">
+        <button onclick="openContactForm()">Click Here to Contact Us!</button>
+        <div class="contactForm" id="contactForm">
+            <p>Any aspect marked with <span style="font-weight: bold;">(*)</span> is required to submit.</p>
+            <br>
+            <form>
+                <label>First Name: <span style="font-weight: bold;">(*)</span></label>
+                <br>
+                <input id="userInpt" type="text" name="firstName" placeholder=" Rick" required>
+                <br><br>
+                <label>Last Name: </label>
+                <br>
+                <input id="userInpt" type="text" name="lastName" placeholder=" Sanchez">
+                <br><br>
+                <label>Phone Number: <span style="font-weight: bold;">(*)</span></label>
+                <br>
+                <input id="userInpt" type="number" name="phoneNo" placeholder=" 07979 123 456" required>
+                <br><br>
+                <label>Email: <span style="font-weight: bold;">(*)</span></label >
+                <br>
+                <input id="userInpt" type="email" name="userEmail" placeholder=" Rich.C137@eu.uk.com" required>
+                <br><br>
+                <label>Extra comments: </label>
+                <br>
+                <textarea id="userInpt" style="resize: none; height: 100px;"></textarea>
+                <br>
+                <input id="rememberCheckBox" type="checkbox">
+                <label>Susbcribe to our newsletter?</label>
+                <br><br>
+                <input id="submitButton" type="submit" name="userSubmit">
+            </form>
+            <br>
+            <p style="color: red; font-size: 18px;">*This form is not linked to any server, any information 'sent' will not go anywhere. And marking the option to 'subscribe' will not activate any kind of spam to your email*</p>
+            <br>
+            <div class="credits">
+                <p>Website made by: @EduardoSandoval</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isItOpen = false;
+
+        function openContactForm() {
+            if(isItOpen==false){
+                var contactForm = document.getElementById("contactForm");
+                contactForm.style.display = "block";
+                isItOpen=true;
+            }
+            else{
+                var contactForm = document.getElementById("contactForm");
+                contactForm.style.display = "none";
+                isItOpen=false;}
+            }
+    </script>
+</body>
+</html>
